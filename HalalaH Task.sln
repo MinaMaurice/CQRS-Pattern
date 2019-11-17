@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands", "Commands\Commands.csproj", "{DF98DBD6-188A-474A-94AC-5F9FE7AA4BD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries", "Queries\Queries.csproj", "{BF16C6F6-C804-4D8E-B1EC-C458F56D9538}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{2DAEBF76-10D8-4E7F-B16E-ABAF02AEC617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transactions", "Transactions\Transactions.csproj", "{DCC9D328-C47C-4F86-96A9-091D251D4B8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{40D8040F-57C6-43A4-AC27-098222A04B1E}"
+	ProjectSection(SolutionItems) = preProject
+		D:\HalalaH.bak = D:\HalalaH.bak
+		D:\HalalaHEvents.bak = D:\HalalaHEvents.bak
+		MakeTransfer.txt = MakeTransfer.txt
+		UpdateAmounts.txt = UpdateAmounts.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF98DBD6-188A-474A-94AC-5F9FE7AA4BD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF98DBD6-188A-474A-94AC-5F9FE7AA4BD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF98DBD6-188A-474A-94AC-5F9FE7AA4BD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF98DBD6-188A-474A-94AC-5F9FE7AA4BD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF16C6F6-C804-4D8E-B1EC-C458F56D9538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF16C6F6-C804-4D8E-B1EC-C458F56D9538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF16C6F6-C804-4D8E-B1EC-C458F56D9538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF16C6F6-C804-4D8E-B1EC-C458F56D9538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DAEBF76-10D8-4E7F-B16E-ABAF02AEC617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DAEBF76-10D8-4E7F-B16E-ABAF02AEC617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DAEBF76-10D8-4E7F-B16E-ABAF02AEC617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DAEBF76-10D8-4E7F-B16E-ABAF02AEC617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCC9D328-C47C-4F86-96A9-091D251D4B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCC9D328-C47C-4F86-96A9-091D251D4B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCC9D328-C47C-4F86-96A9-091D251D4B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCC9D328-C47C-4F86-96A9-091D251D4B8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F501D56-F417-484B-98ED-1BC30C51DB2C}
+	EndGlobalSection
+EndGlobal

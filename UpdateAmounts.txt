@@ -1,0 +1,18 @@
+USE [HalalaHEvents]
+GO
+/****** Object:  StoredProcedure [dbo].[UpdateAmounts]    Script Date: 11/17/2019 6:47:07 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+Create PROCEDURE [dbo].[UpdateAmounts] @FromUser int ,@ToUser int , @Amount decimal(18,2)
+AS
+BEGIN
+		  update dbo.Users 
+		  set dbo.Users.balance -= @Amount
+		  where dbo.Users.ID = @FromUser
+
+		  update dbo.Users 
+		  set dbo.Users.balance += @Amount
+		  where dbo.Users.ID = @ToUser
+END

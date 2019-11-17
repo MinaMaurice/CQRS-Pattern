@@ -1,0 +1,41 @@
+USE [HalalaH]
+GO
+/****** Object:  StoredProcedure [dbo].[MakeTransfer]    Script Date: 11/17/2019 6:48:03 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+Create PROCEDURE [dbo].[MakeTransfer] @FromUser int ,@ToUser int , @Amount decimal(18,2) , @result  bit OUTPUT
+AS
+BEGIN
+    BEGIN TRANSACTION;
+        SAVE TRANSACTION RestorePoint;
+        BEGIN TRY
+		Declare @Balance decimal(18,2)
+		select @Balance = u.balance from dbo.Users as u where u.ID = @FromUser
+		if (@Balance >= @Amount)
+		BEGIN
+		  update dbo.Users 
+		  set dbo.Users.balance -= @Amount
+		  where dbo.Users.ID = @FromUser
+
+		  update dbo.Users 
+		  set dbo.Users.balance += @Amount
+		  where dbo.Users.ID = @ToUser
+
+		  set @result = 1;
+         END
+		ELSE
+          BEGIN
+		  set @result = 0;
+		  END
+		
+		COMMIT TRANSACTION
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0
+        BEGIN
+            ROLLBACK TRANSACTION RestorePoint;
+        END
+    END CATCH
+END
